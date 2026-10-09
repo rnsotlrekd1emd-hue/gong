@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간인력 - 정기청소 | 계단청소 전문 (010-8287-8259)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        cream: {
+                            50: '#fcfbf7',
+                            100: '#f7f5f0',
+                            200: '#ebe7db',
+                        },
+                        emerald: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding-bottom: 70px; /* Space for mobile sticky footer */
+        }
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+        .bg-soft-cream {
+            background-color: #f7f5f0;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+        .pulse-btn {
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Vector Logo with Emblem -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white border border-slate-200 shadow-sm group-hover:scale-105 transition-transform p-1">
+                    <!-- Inline Vector SVG Graphic representing original logo -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#f8fafc" stroke="#1e40af" stroke-width="2.5"/>
+                        <circle cx="50" cy="50" r="41" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="2,2"/>
+                        <!-- Buildings -->
+                        <rect x="42" y="32" width="12" height="36" fill="none" stroke="#1e3a8a" stroke-width="2.5" rx="1"/>
+                        <rect x="52" y="24" width="12" height="44" fill="none" stroke="#1e3a8a" stroke-width="2.5" rx="1"/>
+                        <!-- Staircase -->
+                        <path d="M58 64 H64 V58 H70 V52 H76 V46" fill="none" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Eco Leaf -->
+                        <path d="M42 64 C30 64 28 48 42 38 C42 50 34 58 42 64 Z" fill="#34d399" stroke="#059669" stroke-width="1.5"/>
+                        <path d="M35 55 C38 52 40 48 42 38" fill="none" stroke="#059669" stroke-width="1.5"/>
+                        <!-- Swirl Ring -->
+                        <path d="M20 50 A30 30 0 1 1 80 50" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-2xl font-black text-slate-900 tracking-tight block leading-none">공간인력</span>
+                    <span class="text-xs font-semibold text-slate-500 tracking-wider mt-1 block">정기청소 | 계단청소</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+                <a href="#services" class="hover:text-slate-900 transition-colors">주요 서비스</a>
+                <a href="#pricing" class="hover:text-slate-900 transition-colors">착한 계단 견적표</a>
+                <a href="#why-us" class="hover:text-slate-900 transition-colors">공간인력 약속</a>
+            </nav>
+
+            <!-- Prominent Phone Call CTA -->
+            <div class="flex items-center gap-3">
+                <a href="tel:010-8287-8259" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 sm:px-5 py-2.5 rounded-xl text-sm sm:text-base transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                    <i class="fa-solid fa-phone animate-bounce"></i>
+                    <span class="hidden sm:inline">전화 상담</span>
+                    <span class="font-extrabold tracking-wider">010-8287-8259</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Visual Section -->
+    <section class="relative bg-soft-cream py-16 sm:py-24 border-b border-slate-200 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                        빌딩·빌라·사무실·학원·병원 정기청소 전문
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tight">
+                        깨끗함이 다른 정기청소<br>
+                        <span class="text-emerald-600 underline decoration-slate-300 underline-offset-8">공간인력</span>에 맡기세요!
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 font-medium">
+                        거품 없는 정직한 견적과 구석구석 꼼꼼한 관리!<br>
+                        망설이지 마시고 지금 바로 전화로 편리하게 문의해 보세요.
+                    </p>
+
+                    <!-- Large Highlighted Phone Button -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="tel:010-8287-8259" class="pulse-btn w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-extrabold px-8 py-4 rounded-2xl transition-all shadow-xl text-center text-lg sm:text-xl flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-phone text-emerald-400 text-xl"></i>
+                            <span>바로 전화 연결 (010-8287-8259)</span>
+                        </a>
+                    </div>
+                    
+                    <p class="text-xs text-slate-500 font-semibold pt-1">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> 터치 시 010-8287-8259 번호로 바로 연결됩니다.
+                    </p>
+                </div>
+
+                <!-- Feature Highlight Box -->
+                <div class="md:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 card-shadow space-y-4">
+                    <h3 class="font-extrabold text-slate-900 text-lg border-b border-slate-200 pb-3 flex items-center justify-between">
+                        <span>공간인력 정기청소 분야</span>
+                        <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">맞춤 케어</span>
+                    </h3>
+
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                            <i class="fa-solid fa-stairs text-slate-800 text-xl"></i>
+                            <h4 class="font-bold text-slate-900 text-sm">빌라 / 상가 계단</h4>
+                            <p class="text-xs text-slate-500">현관, 복도, 엘리베이터</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                            <i class="fa-solid fa-briefcase text-slate-800 text-xl"></i>
+                            <h4 class="font-bold text-slate-900 text-sm">사무실 정기청소</h4>
+                            <p class="text-xs text-slate-500">바닥, 먼지, 쓰레기 배출</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                            <i class="fa-solid fa-graduation-cap text-slate-800 text-xl"></i>
+                            <h4 class="font-bold text-slate-900 text-sm">학원 청소</h4>
+                            <p class="text-xs text-slate-500">강의실, 책상, 쾌적 관리</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                            <i class="fa-solid fa-hospital text-slate-800 text-xl"></i>
+                            <h4 class="font-bold text-slate-900 text-sm">병원 청소</h4>
+                            <p class="text-xs text-slate-500">위생 소독 중심 청결 케어</p>
+                        </div>
+                    </div>
+
+                    <!-- Call Box Card -->
+                    <a href="tel:010-8287-8259" class="block w-full bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 p-4 rounded-2xl text-center transition-all">
+                        <span class="text-xs font-bold text-emerald-800 block">견적 및 방문 상담 문의</span>
+                        <span class="text-xl font-black text-emerald-900 tracking-wide"><i class="fa-solid fa-headset mr-1.5"></i>010-8287-8259</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 inline-block px-3 py-1 rounded-full border border-emerald-200">OUR SERVICES</h2>
+                <p class="text-3xl font-black text-slate-900">공간별 맞춤 정기청소 서비스</p>
+                <p class="text-slate-600 text-sm font-medium">관리하기 힘들고 번거로운 청소, 전문가에게 믿고 맡기세요.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-slate-400 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg mb-5 shadow">
+                            <i class="fa-solid fa-stairs"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900 mb-2">빌라/빌딩 계단청소</h3>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 계단 먼지 및 찌든때 닦이</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 현관 유리창 및 창틀 케어</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 엘리베이터 내외부 청결</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 주차장 및 분리수거장 정돈</li>
+                        </ul>
+                    </div>
+                    <a href="tel:010-8287-8259" class="text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 py-3 px-3 rounded-xl border border-slate-300 text-center block shadow-sm">
+                        <i class="fa-solid fa-phone mr-1 text-emerald-600"></i> 전화로 견적 문의
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-slate-400 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg mb-5 shadow">
+                            <i class="fa-solid fa-building-user"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900 mb-2">사무실 정기청소</h3>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 업무 공간 바닥 청소</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 개인/공용 휴지통 분리수거</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 탕비실 및 싱크대 위생 관리</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 회의실 테이블 및 집기 케어</li>
+                        </ul>
+                    </div>
+                    <a href="tel:010-8287-8259" class="text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 py-3 px-3 rounded-xl border border-slate-300 text-center block shadow-sm">
+                        <i class="fa-solid fa-phone mr-1 text-emerald-600"></i> 전화로 견적 문의
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-slate-400 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg mb-5 shadow">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900 mb-2">학원 정기청소</h3>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 강의실 책상, 의자 먼지 케어</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 칠판 분진 및 복도 닦기</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 원생용 화장실 살균 청소</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 쾌적한 안심 학습 환경 조성</li>
+                        </ul>
+                    </div>
+                    <a href="tel:010-8287-8259" class="text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 py-3 px-3 rounded-xl border border-slate-300 text-center block shadow-sm">
+                        <i class="fa-solid fa-phone mr-1 text-emerald-600"></i> 전화로 견적 문의
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-slate-400 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-lg mb-5 shadow">
+                            <i class="fa-solid fa-hand-holding-medical"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900 mb-2">병원 정기청소</h3>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 대기실, 진료실 바닥 케어</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 손잡이 및 공용 집기 소독</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 위생 전문 화장실 청소</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> 철저한 청결 기준 준수</li>
+                        </ul>
+                    </div>
+                    <a href="tel:010-8287-8259" class="text-xs font-bold text-slate-900 bg-white hover:bg-slate-100 py-3 px-3 rounded-xl border border-slate-300 text-center block shadow-sm">
+                        <i class="fa-solid fa-phone mr-1 text-emerald-600"></i> 전화로 견적 문의
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table Section -->
+    <section id="pricing" class="py-16 sm:py-24 bg-soft-cream border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-2">
+                <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">TRANSPARENT PRICING</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-700">공간인력</h3>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">착한 계단 견적 산정표</h2>
+                <p class="text-xs sm:text-sm text-slate-600 font-medium mt-1">투명하고 정직한 기준 단가로 정성껏 서비스합니다.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Top Floor Base Table -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-300 shadow-md">
+                    <div class="bg-slate-900 text-white font-extrabold grid grid-cols-3 text-center py-4 text-sm sm:text-base">
+                        <div>구분</div>
+                        <div>4층</div>
+                        <div>5층</div>
+                    </div>
+                    <div class="divide-y divide-slate-200 text-center text-sm font-semibold text-slate-800">
+                        <div class="grid grid-cols-3 py-4.5 items-center bg-white hover:bg-slate-50 transition-colors">
+                            <div class="font-extrabold text-slate-900">빌라</div>
+                            <div class="font-bold text-emerald-700 text-base">65,000원~</div>
+                            <div class="font-bold text-emerald-700 text-base">75,000원~</div>
+                        </div>
+                        <div class="grid grid-cols-3 py-4.5 items-center bg-white hover:bg-slate-50 transition-colors">
+                            <div class="font-extrabold text-slate-900">상가</div>
+                            <div class="font-bold text-emerald-700 text-base">75,000원~</div>
+                            <div class="font-bold text-emerald-700 text-base">85,000원~</div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 py-3 px-4 text-right text-xs text-slate-500 font-semibold border-t border-slate-200">
+                        (한 달 4~5회 방문 기준)
+                    </div>
+                </div>
+
+                <!-- Detail Add-on Price Table -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-300 shadow-md space-y-4">
+                    <h4 class="font-extrabold text-slate-900 text-lg border-b border-slate-200 pb-3 flex items-center justify-between">
+                        <span>견적 산정표 (상세 항목)</span>
+                        <span class="text-xs text-slate-500 font-normal">* 현장 구조에 따른 단가</span>
+                    </h4>
+
+                    <div class="space-y-2.5 pt-1">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">계단 청소 1개층</span>
+                            <span class="font-extrabold text-slate-900 text-base">10,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">주차장 면적 차량 4대당</span>
+                            <span class="font-extrabold text-slate-900 text-base">10,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">긴 복도(5m이상)</span>
+                                <span class="text-xs text-slate-500 font-medium">(5m당)</span>
+                            </div>
+                            <span class="font-extrabold text-slate-900 text-base">5,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">엘레베이터</span>
+                            <span class="font-extrabold text-slate-900 text-base">5,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">소형 화장실</span>
+                                <span class="text-xs text-slate-500 font-medium">(변기 1개, 세면대 1개)</span>
+                            </div>
+                            <span class="font-extrabold text-slate-900 text-base">15,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">변기 1개</span>
+                                <span class="text-xs text-slate-500 font-medium">(추가당)</span>
+                            </div>
+                            <span class="font-extrabold text-slate-900 text-base">5,000원</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded-lg">상가 할증료</span>
+                            <span class="font-extrabold text-slate-900 text-base">5,000~10,000원</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Call CTA inside Pricing -->
+                    <div class="mt-6 pt-4 border-t border-slate-200 text-center">
+                        <a href="tel:010-8287-8259" class="inline-flex items-center justify-center gap-3 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-4 rounded-xl transition-all shadow-md text-base sm:text-lg">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>상세 견적 방문 및 전화 문의 (010-8287-8259)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 inline-block px-3 py-1 rounded-full border border-emerald-200">WHY 공간인력</h2>
+                <p class="text-3xl font-black text-slate-900">공간인력을 선택해야 하는 이유</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-slate-50 rounded-2xl border border-slate-200 card-shadow space-y-4">
+                    <div class="w-16 h-16 bg-slate-900 text-emerald-400 rounded-2xl mx-auto flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">투명한 착한 견적</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                        거품이 없는 명확한 단가표를 기준으로 정직하고 알뜰하게 견적을 안내해 드립니다.
+                    </p>
+                </div>
+
+                <div class="text-center p-8 bg-slate-50 rounded-2xl border border-slate-200 card-shadow space-y-4">
+                    <div class="w-16 h-16 bg-slate-900 text-emerald-400 rounded-2xl mx-auto flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">구석구석 꼼꼼한 관리</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                        눈에 잘 보이지 않는 창틀, 구석먼지, 손잡이 살균 소독까지 놓치지 않고 꼼꼼히 청소합니다.
+                    </p>
+                </div>
+
+                <div class="text-center p-8 bg-slate-50 rounded-2xl border border-slate-200 card-shadow space-y-4">
+                    <div class="w-16 h-16 bg-slate-900 text-emerald-400 rounded-2xl mx-auto flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">약속된 주기적 안심 방문</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                        원하시는 주기에 맞춰 책임감을 가지고 정기 방문하여 깨끗하고 쾌적하게 유지해 드립니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Banner Section -->
+    <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10">
+            <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">친절상담 보장</span>
+            <h2 class="text-3xl sm:text-4xl font-black leading-tight">
+                청소 고민, 지금 바로 전화 한 통으로 해결하세요!
+            </h2>
+            <p class="text-slate-300 text-base max-w-xl mx-auto font-medium">
+                빌라, 상가, 사무실, 학원, 병원 무료 방문 상담 가능!<br>
+                친절하고 정직하게 안내해 드리겠습니다.
+            </p>
+            <div class="pt-2">
+                <a href="tel:010-8287-8259" class="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black px-8 py-4 rounded-2xl text-xl sm:text-2xl transition-all shadow-2xl">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>010-8287-8259 바로 연결</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-slate-800 pb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full overflow-hidden bg-white border border-slate-700 flex items-center justify-center p-0.5">
+                        <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="46" fill="#f8fafc" stroke="#1e40af" stroke-width="2.5"/>
+                            <rect x="42" y="32" width="12" height="36" fill="none" stroke="#1e3a8a" stroke-width="2.5" rx="1"/>
+                            <rect x="52" y="24" width="12" height="44" fill="none" stroke="#1e3a8a" stroke-width="2.5" rx="1"/>
+                            <path d="M58 64 H64 V58 H70 V52 H76 V46" fill="none" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M42 64 C30 64 28 48 42 38 C42 50 34 58 42 64 Z" fill="#34d399" stroke="#059669" stroke-width="1.5"/>
+                            <path d="M20 50 A30 30 0 1 1 80 50" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-white tracking-tight">공간인력</span>
+                        <p class="text-xs text-slate-400 mt-0.5">정기청소 | 계단청소 | 사무실청소 | 학원청소 | 병원청소</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-xs font-bold text-slate-300">
+                    <a href="#services" class="hover:text-white transition-colors">주요서비스</a>
+                    <a href="#pricing" class="hover:text-white transition-colors">착한견적표</a>
+                    <a href="#why-us" class="hover:text-white transition-colors">공간인력약속</a>
+                </div>
+            </div>
+
+            <div class="text-xs text-slate-400 leading-relaxed space-y-2">
+                <div class="flex flex-wrap items-center gap-y-1 gap-x-4">
+                    <p><span class="text-slate-500">상호명:</span> <strong class="text-slate-300">공간인력</strong></p>
+                    <p><span class="text-slate-500">사업자등록번호:</span> <strong class="text-slate-300">286-10-02538</strong></p>
+                    <p><span class="text-slate-500">대표전화:</span> <a href="tel:010-8287-8259" class="text-emerald-400 font-bold hover:underline">010-8287-8259</a></p>
+                </div>
+                <p class="text-slate-500 pt-1">서비스 항목: 빌딩·빌라 계단 정기청소, 사무실 정기청소, 학원 정기청소, 병원 정기청소</p>
+                <p class="text-slate-600 pt-2">© 공간인력. All rights reserved. 정직한 가격과 세심한 정기청소 전문</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Direct Call Footer -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 md:hidden shadow-2xl">
+        <a href="tel:010-8287-8259" class="flex items-center justify-center gap-3 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3.5 px-4 rounded-xl text-lg shadow-lg">
+            <i class="fa-solid fa-phone text-xl animate-bounce"></i>
+            <span>📞 바로 전화 상담하기 (010-8287-8259)</span>
+        </a>
+    </div>
+
+</body>
+</html>
